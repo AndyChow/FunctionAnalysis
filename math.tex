@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{CJK}
+\usepackage{amssymb}
+\begin{document}
+
+\begin{CJK*}{GBK}{song}
+\section{线性空间}
+常见线性空间
+$\mathbb{R}^n$
+$\mathbb{R}^{n\times n}$
+$\mathbb{C}^n$
+$\mathbb{C}^{n\times n}$
+\subsection{$C[a,b]$空间}
+$C[a,b]$表示闭区间$[a,b]$上的所有连续函数构成的集合，其形式化定义为：
+    $$C[a,b] = \{f(x)|f(x)  contious over [a,b]\}$$
+\subsection{$l^p$空间}
+$l^p$空间是由实或复数列：
+    $x = (\xi_1,\xi_2,\cdots,\xi_n,\cdots)$
+构成的集合，并且满足条件：
+    $$\sum\limits_{i=1}^{\infty}|\xi_i|^p < \infty$$
+形式化定义为：
+    $$l^p = \{(\xi_1,\xi_2,\cdots,\xi_n,\cdots) | \sum\limits_{i=1}^{\infty}|\xi_i|^p < \infty\}$$
+容易验证其为一线性空间。
+
+\section{赋范线性空间}
+常见赋范线性空间的范数定义
+\subsection{$C[a,b]$空间}
+无穷范数：
+    $$\|x(t)\|_\infty = \max_{x\in[a,b]}|x(t)|$$
+$p$范数：
+    $$\|x(t)\|_p = (\int_a^b|x(t)|^p dt)^\frac{1}{p}$$
+$2$范数：
+    $$\|x(t)\|_2 = (\int_a^b|x(t)|^2 dt)^\frac{1}{2}$$
+
+\subsection{$l^p$空间}
+
+$p$范数定义：
+    $$\|x\| = (\sum\limits_{i=1}^{\infty}|\xi_i|^p)^\frac{1}{p}$$
+也可以记成:
+    $$\|x\|_p = (\sum\limits_{i=1}^{\infty}|\xi_i|^p)^\frac{1}{p}$$
+$p=2$时为$l^2$空间，范数定义：
+    $$\|x\|_2 = (\sum\limits_{i=1}^{\infty}|\xi_i|^2)^\frac{1}{2}$$
+$p=\infty$时为无穷范数，定义为：
+    $$\|x\|_\infty = \sup\limits_{n \in Z_+}|\xi_n|$$
+    
+%Lp空间
+\section{内积空间}
+\subsection{$C[a,b]$空间}
+$\forall x, y \in C[a,b]$ 内积定义：
+    $$\langle x,y\rangle = \int_a^b x(t)\overline{y(t)}dt$$
+由内积导出的范数为：
+    $$\|x\|_2 = \sqrt{\langle x,x \rangle} = (\int_a^b |x(t)|^2 dt)^\frac{1}{2}$$
+    
+\subsection{$l^2$空间}
+$\forall x=(\xi_1,\xi_2,\cdots), y=(\eta_1,\eta_2,\cdots)$，内积定义：
+    $$\langle x,y\rangle = \sum\limits_{i=1}^{\infty}\xi_i\overline{\eta_i}$$
+由内积导出的范数为：
+    $$\|x\|_2 = \sqrt{\langle x,x \rangle} = (\sum\limits_{i=1}^{\infty}|\xi_i|^2)^\frac{1}{2}$$
+\end{CJK*}
+
+\end{document}
